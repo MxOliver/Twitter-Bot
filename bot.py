@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import tweepy 
-from time import sleep 
+from time import sleep, time 
 from credentials import *
 
 from os import environ
@@ -45,14 +45,14 @@ for i in range(n_words):
 
 line = (' '.join(chain))
 
+INTERVAL = 30
 
 result = line.find('.')
-
 
 if result > 0:
     tweet = line[0:result + 1]
     print(tweet)
     api.update_status(tweet)
-    sleep(30)
+    time.sleep(INTERVAL)
 else:
     pass 
