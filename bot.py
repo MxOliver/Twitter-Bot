@@ -14,8 +14,6 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-STATE_LEN = 5 
-
 words = open('source.txt').read()
 
 corpus = words.split()
@@ -36,7 +34,7 @@ for word_1, word_2 in pairs:
 
 first_word = np.random.choice(corpus)
 
-chain = [first_word]
+chain = ['Never']
 
 n_words = 15
 
@@ -45,14 +43,14 @@ for i in range(n_words):
 
 line = (' '.join(chain))
 
-INTERVAL = 30
 
 result = line.find('.')
+
 
 if result > 0:
     tweet = line[0:result + 1]
     print(tweet)
     api.update_status(tweet)
-    time.sleep(INTERVAL)
+    sleep(60)
 else:
     pass 
