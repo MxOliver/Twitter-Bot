@@ -105,3 +105,6 @@ venv.bak/
 
 # twitter keys 
 credentials.py
+
+env
+*.pyc 
