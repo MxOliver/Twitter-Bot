@@ -1,5 +1,4 @@
 import random
-import numpy as np
 import tweepy 
 from time import sleep, time 
 from credentials import *
