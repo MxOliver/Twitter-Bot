@@ -1,5 +1,6 @@
 import random
 import tweepy 
+import numpy as np 
 from time import sleep, time 
 
 from os import environ
