@@ -1,7 +1,6 @@
 import random
 import tweepy 
 from time import sleep, time 
-from credentials import *
 
 from os import environ
 CONSUMER_KEY = environ['CONSUMER_KEY']
